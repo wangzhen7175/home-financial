@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="UserMapper" >
+  <sql id="Base_Column_List" >
+        user_id,user_name,password,email,status,activation_code,createTime,modifiedTime,daleteFlag
+    </sql>
+    <insert id="insertOne" parameterType="UserPo">
+    insert into t_user (user_id,user_name,password,email,status,activation_code,createTime,modifiedTime,daleteFlag)
+    values (#{userId},#{userName},#{password},#{email},#{status},#{activationCode},#{createTime},#{modifiedTime},#{daleteFlag})
+    </insert>
+</mapper>
